@@ -1,0 +1,217 @@
+import Link from "next/link"
+import Image from "next/image"
+import { Button } from "@/components/ui/button"
+import { Facebook, Instagram, Twitter, ArrowRight } from "lucide-react"
+import ProgramCarousel from "@/components/program-carousel"
+import ArticlesList from "@/components/articles-list"
+import WhatIsCda from "@/components/what-is-cda"
+import SupportReels from "@/components/support-reels"
+import CountdownTimer from "@/components/countdown-timer"
+import { WhatsappCTA } from "@/components/whatsapp-cta"
+
+export default function Home() {
+  return (
+    <main className="min-h-screen">
+      {/* Decorative background elements */}
+      <div className="fixed inset-0 -z-10 overflow-hidden">
+        <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-purple-300/30 blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-80 h-80 rounded-full bg-blue-300/30 blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/3 w-72 h-72 rounded-full bg-pink-300/20 blur-3xl"></div>
+      </div>
+
+      {/* Hero Section */}
+      <section className="relative py-6 sm:py-8 md:py-16 px-4 overflow-hidden">
+        <div className="absolute top-0 right-0 -z-10 w-64 h-64 bg-yellow-200 rounded-full blur-2xl opacity-30 transform translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute bottom-0 left-0 -z-10 w-64 h-64 bg-blue-200 rounded-full blur-2xl opacity-30 transform -translate-x-1/2 translate-y-1/2"></div>
+
+        <div className="container mx-auto max-w-6xl">
+          <div className="flex flex-col md:flex-row items-center gap-6 sm:gap-8 md:gap-12">
+            <div className="flex-1 space-y-4 sm:space-y-6">
+              <div className="inline-block px-3 py-1 sm:px-4 sm:py-1 bg-blue-100 text-blue-800 rounded-full text-xs sm:text-sm font-medium animate-pulse">
+                Elezioni Università di Firenze 2025 🗳️
+              </div>
+              <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                Pietro Gentili
+              </h1>
+              <p className="text-lg sm:text-xl md:text-2xl font-medium">
+                Candidato al Consiglio d'Amministrazione
+                <span className="ml-2">✨</span>
+              </p>
+              <p className="text-base sm:text-lg text-muted-foreground">
+                Un'università più inclusiva, sostenibile e orientata al futuro. Insieme possiamo fare la differenza! 🚀
+              </p>
+
+              <div className="flex flex-wrap gap-3 sm:gap-4">
+                <Button
+                  size="sm"
+                  className="rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 sm:size-lg w-full sm:w-auto"
+                >
+                  Scopri il programma
+                </Button>
+                <Button size="sm" variant="outline" className="rounded-full border-2 sm:size-lg w-full sm:w-auto">
+                  Chi sono
+                </Button>
+                <div className="hidden sm:block">
+                  <WhatsappCTA />
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3 sm:gap-4 pt-2 sm:pt-4">
+                <span className="text-xs sm:text-sm font-medium text-muted-foreground">Seguimi:</span>
+                <Link
+                  href="#"
+                  className="bg-blue-100 p-1.5 sm:p-2 rounded-full text-blue-600 hover:bg-blue-200 transition-colors"
+                >
+                  <Facebook size={16} className="sm:w-5 sm:h-5" />
+                  <span className="sr-only">Facebook</span>
+                </Link>
+                <Link
+                  href="#"
+                  className="bg-pink-100 p-1.5 sm:p-2 rounded-full text-pink-600 hover:bg-pink-200 transition-colors"
+                >
+                  <Instagram size={16} className="sm:w-5 sm:h-5" />
+                  <span className="sr-only">Instagram</span>
+                </Link>
+                <Link
+                  href="#"
+                  className="bg-sky-100 p-1.5 sm:p-2 rounded-full text-sky-600 hover:bg-sky-200 transition-colors"
+                >
+                  <Twitter size={16} className="sm:w-5 sm:h-5" />
+                  <span className="sr-only">Twitter</span>
+                </Link>
+              </div>
+            </div>
+
+            <div className="relative flex-1 max-w-xs sm:max-w-sm md:max-w-md mt-6 md:mt-0 mb-4 sm:mb-0">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl blur-xl opacity-30 -z-10 transform rotate-3"></div>
+              <div className="relative bg-white rounded-3xl p-2 shadow-xl">
+                <Image
+                  src="/placeholder.svg?height=600&width=600"
+                  alt="Pietro Gentili"
+                  width={600}
+                  height={600}
+                  className="rounded-2xl"
+                />
+              </div>
+              <div className="absolute -bottom-4 -right-4 bg-yellow-400 text-yellow-900 rounded-full px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-bold shadow-lg transform rotate-6">
+                Il tuo voto conta! 🗳️
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Countdown Timer */}
+      <section className="py-3 sm:py-4 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <CountdownTimer />
+        </div>
+      </section>
+
+      {/* Support Reels Section */}
+      <section className="py-6 sm:py-8 md:py-16 px-4 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-white to-purple-50 -z-10"></div>
+
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-6 sm:mb-8 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4">Chi Mi Sostiene 👥</h2>
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
+              Scopri perché tanti studenti hanno deciso di sostenere la mia candidatura
+            </p>
+          </div>
+
+          <SupportReels />
+        </div>
+      </section>
+
+      {/* Program Carousel */}
+      <section className="py-6 sm:py-8 md:py-16 px-4 relative overflow-hidden">
+        <div className="absolute top-1/2 left-0 w-full h-72 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 -z-10 transform -translate-y-1/2"></div>
+
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-6 sm:mb-8 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4">Il Mio Programma 📝</h2>
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
+              Ecco i punti principali su cui mi impegno a lavorare per migliorare la nostra università
+            </p>
+          </div>
+
+          <ProgramCarousel />
+
+          <div className="mt-6 sm:mt-8 text-center">
+            <Link href="/programma" className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+              Scopri il programma completo <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Articles Section */}
+      <section className="py-6 sm:py-8 md:py-16 px-4 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-white to-blue-50 -z-10"></div>
+        <div className="absolute top-0 left-0 w-full h-20 bg-[url('/placeholder.svg?height=20&width=1000')] bg-repeat-x opacity-5 -z-10"></div>
+
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-6 sm:mb-8 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4">Articoli e Novità 📰</h2>
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
+              Resta aggiornato sulle ultime novità della campagna e dell'università
+            </p>
+          </div>
+
+          <ArticlesList />
+        </div>
+      </section>
+
+      {/* What is CDA Section */}
+      <section className="py-6 sm:py-8 md:py-16 px-4 relative overflow-hidden bg-gradient-to-r from-blue-900 to-purple-900 text-white">
+        <div className="absolute inset-0 bg-[url('/placeholder.svg?height=100&width=100')] bg-repeat opacity-5"></div>
+        <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500 rounded-full blur-3xl opacity-20"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500 rounded-full blur-3xl opacity-20"></div>
+
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <div className="text-center mb-6 sm:mb-8 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4">Cos'è il CDA? 🏛️</h2>
+            <p className="text-base sm:text-lg text-blue-100 max-w-2xl mx-auto">
+              Scopri il ruolo e l'importanza del Consiglio di Amministrazione nell'università
+            </p>
+          </div>
+
+          <WhatIsCda />
+
+          <div className="mt-6 sm:mt-8 text-center">
+            <Link
+              href="/come-si-vota"
+              className="inline-flex items-center justify-center rounded-md bg-white px-4 py-2 sm:px-8 sm:py-3 text-xs sm:text-sm font-medium text-blue-900 shadow transition-colors hover:bg-blue-50"
+            >
+              Scopri come si vota
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Old Website Link */}
+      <section className="py-3 sm:py-4 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
+            <div className="flex-1 text-center sm:text-left">
+              <h3 className="text-lg sm:text-xl font-bold text-amber-800">Elezioni Amministrative 2024</h3>
+              <p className="text-sm sm:text-base text-amber-700">
+                Visita il sito della precedente campagna elettorale per il comune di Portoferraio
+              </p>
+            </div>
+            <Button
+              variant="outline"
+              className="border-amber-400 text-amber-700 hover:bg-amber-100 w-full sm:w-auto mt-2 sm:mt-0"
+            >
+              Visita il vecchio sito
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* WhatsApp Floating Button */}
+      <WhatsappCTA variant="floating" />
+    </main>
+  )
+}

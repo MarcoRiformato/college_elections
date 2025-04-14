@@ -1,13 +1,14 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Facebook, Instagram, Twitter, ArrowRight } from "lucide-react"
+import { Facebook, Instagram, Twitter, ArrowRight, Mail } from "lucide-react"
 import ProgramCarousel from "@/components/program-carousel"
 import ArticlesList from "@/components/articles-list"
 import WhatIsCda from "@/components/what-is-cda"
 import SupportReels from "@/components/support-reels"
 import CountdownTimer from "@/components/countdown-timer"
 import { WhatsappCTA } from "@/components/whatsapp-cta"
+import { EmailCopyButton } from "@/components/email-copy-button"
 
 export default function Home() {
   return (
@@ -173,36 +174,56 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Old Website Link */}
-      <section className="py-3 sm:py-4 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-4 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
-            <div className="flex-1 text-center sm:text-left">
-              <h3 className="text-lg sm:text-xl font-bold text-amber-800">Elezioni Amministrative 2024</h3>
-              <p className="text-sm sm:text-base text-amber-700">
-                Visita il sito della precedente campagna elettorale per il comune di Portoferraio
-              </p>
-            </div>
-            <Button
-              variant="outline"
-              className="border-amber-400 text-amber-700 hover:bg-amber-100 w-full sm:w-auto mt-2 sm:mt-0"
-            >
-              Visita il vecchio sito
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* Contacts Section */}
       <section className="py-6 sm:py-8 md:py-16 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Contatti</h2>
+            <p className="text-lg mb-6">Se vuoi parlare meglio delle nostre proposte, farmi domande o avere informazioni, ti lascio tutti i miei contatti:</p>
             <div className="flex flex-col items-center gap-4">
-              <p className="text-lg">Mail: pietrogentili2004@gmail.com</p>
-              <p className="text-lg">Instagram: pietro_gentili_</p>
-              <p className="text-lg">Tik Tok: pietro_gentili</p>
+              <div className="flex items-center gap-2">
+                <Mail className="h-5 w-5" />
+                <span className="text-lg">pietrogentili2004@gmail.com</span>
+                <EmailCopyButton />
+              </div>
+              <Link 
+                href="https://instagram.com/pietro_gentili_" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-lg hover:text-blue-600 transition-colors"
+              >
+                <Instagram className="h-5 w-5" />
+                <span>pietro_gentili_</span>
+              </Link>
+              <Link 
+                href="https://tiktok.com/@pietro_gentili" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-lg hover:text-blue-600 transition-colors"
+              >
+                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                </svg>
+                <span>pietro_gentili</span>
+              </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Old Website Link */}
+      <section className="py-3 px-4 border-t">
+        <div className="container mx-auto max-w-6xl">
+          <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+            <span>Visita il sito della precedente campagna elettorale:</span>
+            <Link 
+              href="https://old.pietrogentili.it" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:text-blue-800 hover:underline"
+            >
+              old.pietrogentili.it
+            </Link>
           </div>
         </div>
       </section>

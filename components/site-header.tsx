@@ -27,6 +27,9 @@ export default function SiteHeader() {
           <Link href="/programma" className="text-sm font-medium hover:text-blue-600 transition-colors">
             Programma
           </Link>
+          <Link href="/temi" className="text-sm font-medium hover:text-blue-600 transition-colors">
+            Temi
+          </Link>
           <Link href="/chi-sono" className="text-sm font-medium hover:text-blue-600 transition-colors">
             Chi Sono
           </Link>
@@ -65,6 +68,13 @@ export default function SiteHeader() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Programma
+              </Link>
+              <Link
+                href="/temi"
+                className="text-sm font-medium hover:text-blue-600 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Temi
               </Link>
               <Link
                 href="/chi-sono"

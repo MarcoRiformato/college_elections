@@ -27,43 +27,15 @@ export default function Contatti() {
             <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-4 md:p-6 border border-blue-100">
               <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">Informazioni di Contatto</h2>
 
-              <div className="space-y-3 md:space-y-4">
-                <div className="flex items-start gap-3 md:gap-4">
-                  <div className="bg-blue-100 p-2 md:p-3 rounded-full text-blue-600">
-                    <Mail className="h-5 w-5 md:h-6 md:w-6" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold">Email</h3>
-                    <p className="text-sm md:text-base text-muted-foreground">pietro.gentili@example.com</p>
-                  </div>
+              <div className="space-y-4">
+                <div>
+                  <h3 className="text-lg font-semibold">Email</h3>
+                  <p className="text-muted-foreground">pietrogentili2004@gmail.com</p>
                 </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="bg-purple-100 p-3 rounded-full text-purple-600">
-                    <Phone className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold">Telefono</h3>
-                    <p className="text-muted-foreground">+39 123 456 7890</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="bg-amber-100 p-3 rounded-full text-amber-600">
-                    <MapPin className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold">Ufficio</h3>
-                    <p className="text-muted-foreground">
-                      Sede Rappresentanza Studenti
-                      <br />
-                      Università di Firenze
-                      <br />
-                      Via delle Pandette, 32
-                      <br />
-                      50127 Firenze
-                    </p>
-                  </div>
+                <div>
+                  <h3 className="text-lg font-semibold">Social Media</h3>
+                  <p className="text-muted-foreground">Instagram: pietro_gentili_</p>
+                  <p className="text-muted-foreground">Tik Tok: pietro_gentili</p>
                 </div>
               </div>
             </div>

@@ -91,19 +91,11 @@ export default function SiteFooter() {
             </ul>
           </div>
 
-          <div className="space-y-3 md:space-y-4">
-            <h3 className="text-xs sm:text-sm font-bold">Contatti</h3>
-            <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
-              <li className="text-muted-foreground">pietro.gentili@example.com</li>
-              <li className="text-muted-foreground">+39 123 456 7890</li>
-              <li className="text-muted-foreground">
-                Università di Firenze
-                <br />
-                Via delle Pandette, 32
-                <br />
-                50127 Firenze
-              </li>
-            </ul>
+          <div className="space-y-2">
+            <h3 className="text-sm font-semibold">Contatti</h3>
+            <p className="text-sm text-muted-foreground">pietrogentili2004@gmail.com</p>
+            <p className="text-sm text-muted-foreground">Instagram: pietro_gentili_</p>
+            <p className="text-sm text-muted-foreground">Tik Tok: pietro_gentili</p>
           </div>
         </div>
 

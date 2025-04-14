@@ -9,39 +9,34 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const programItems = [
   {
-    emoji: "🎓",
-    title: "Diritto allo Studio",
+    emoji: "🏠",
+    title: "Diritto allo studio",
     description:
-      "Ampliamento delle borse di studio e riduzione delle tasse universitarie per gli studenti meritevoli e in difficoltà economica.",
+      "Garantire il diritto all'abitare, aumentando i posti nelle residenze universitarie e lavorare per potenziare i fondi del DSU",
   },
   {
-    emoji: "🌱",
-    title: "Sostenibilità",
+    emoji: "⏰",
+    title: "Orari",
     description:
-      "Implementazione di politiche green per rendere il campus più sostenibile e ridurre l'impatto ambientale dell'università.",
+      "Dare linee guida omogenee per avere orari razionali e comodi, senza vuoti non indispensabili e coerenti con le esigenze di pendolari, lavoratori e fuorisede",
+  },
+  {
+    emoji: "👥",
+    title: "Socialità",
+    description:
+      "L'università va vissuta. Ci impegneremo per costruire nuove occasioni di socialità come progetti, competizioni di dibattito, laboratori ed iniziative volontarie sul territorio",
   },
   {
     emoji: "🏢",
-    title: "Spazi Studenteschi",
+    title: "Spazi studenteschi",
     description:
-      "Creazione di nuovi spazi di studio e socializzazione, con orari estesi e migliori servizi per gli studenti.",
+      "Vogliamo spazi adeguati alle nostre esigenze anche dopo l'orario delle lezioni. Aule studio, tavoli all'aperto, aree verdi e punti di aggregazione devono essere presenti in ogni polo",
   },
   {
-    emoji: "🔬",
-    title: "Ricerca e Innovazione",
+    emoji: "👂",
+    title: "Ascolto",
     description:
-      "Maggiori investimenti nella ricerca e collaborazioni con aziende per creare opportunità di lavoro per i laureati.",
-  },
-  {
-    emoji: "🌐",
-    title: "Internazionalizzazione",
-    description: "Potenziamento dei programmi di scambio internazionale e delle opportunità di studio all'estero.",
-  },
-  {
-    emoji: "♿",
-    title: "Inclusività",
-    description:
-      "Garantire l'accessibilità a tutti gli spazi universitari e supporto per studenti con disabilità o DSA.",
+      "La rappresentanza si basa sull'ascolto. L'unica promessa che so per certo di riuscire a realizzare è quella di ascoltare sempre tutti e costruire ogni scelta a partire dagli studenti che ne sono toccati direttamente",
   },
 ]
 

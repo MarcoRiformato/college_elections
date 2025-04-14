@@ -20,7 +20,7 @@ export default function Home() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative py-6 sm:py-8 md:py-16 px-4 overflow-hidden">
+      <section className="relative py-4 sm:py-8 md:py-16 px-2 sm:px-4 overflow-hidden">
         <div className="absolute top-0 right-0 -z-10 w-64 h-64 bg-yellow-200 rounded-full blur-2xl opacity-30 transform translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute bottom-0 left-0 -z-10 w-64 h-64 bg-blue-200 rounded-full blur-2xl opacity-30 transform -translate-x-1/2 translate-y-1/2"></div>
 
@@ -34,11 +34,11 @@ export default function Home() {
                 Pietro Gentili
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl font-medium">
-                Candidato al Consiglio d'Amministrazione
+                Candidato al Consiglio di Amministrazione con CSX
                 <span className="ml-2">✨</span>
               </p>
               <p className="text-base sm:text-lg text-muted-foreground">
-                Un'università più inclusiva, sostenibile e orientata al futuro. Insieme possiamo fare la differenza! 🚀
+                Per un'università a misura di studente. Dove studiare, vivere e crescere insieme come comunità.
               </p>
 
               <div className="flex flex-wrap gap-3 sm:gap-4">
@@ -46,7 +46,7 @@ export default function Home() {
                   size="sm"
                   className="rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 sm:size-lg w-full sm:w-auto"
                 >
-                  Scopri il programma
+                  Scopri il programma di CSX
                 </Button>
                 <Button size="sm" variant="outline" className="rounded-full border-2 sm:size-lg w-full sm:w-auto">
                   Chi sono
@@ -130,9 +130,9 @@ export default function Home() {
 
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-6 sm:mb-8 md:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4">Il Mio Programma 📝</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4">Il nostro programma 📝</h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-              Ecco i punti principali su cui mi impegno a lavorare per migliorare la nostra università
+              Ecco i punti principali che mi impegno a portare avanti per migliorare la nostra università
             </p>
           </div>
 
@@ -146,23 +146,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Articles Section */}
-      <section className="py-6 sm:py-8 md:py-16 px-4 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-white to-blue-50 -z-10"></div>
-        <div className="absolute top-0 left-0 w-full h-20 bg-[url('/placeholder.svg?height=20&width=1000')] bg-repeat-x opacity-5 -z-10"></div>
-
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-6 sm:mb-8 md:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4">Articoli e Novità 📰</h2>
-            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-              Resta aggiornato sulle ultime novità della campagna e dell'università
-            </p>
-          </div>
-
-          <ArticlesList />
-        </div>
-      </section>
-
       {/* What is CDA Section */}
       <section className="py-6 sm:py-8 md:py-16 px-4 relative overflow-hidden bg-gradient-to-r from-blue-900 to-purple-900 text-white">
         <div className="absolute inset-0 bg-[url('/placeholder.svg?height=100&width=100')] bg-repeat opacity-5"></div>
@@ -173,7 +156,7 @@ export default function Home() {
           <div className="text-center mb-6 sm:mb-8 md:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4">Cos'è il CDA? 🏛️</h2>
             <p className="text-base sm:text-lg text-blue-100 max-w-2xl mx-auto">
-              Scopri il ruolo e l'importanza del Consiglio di Amministrazione nell'università
+              Scopri cosa è il Consiglio di Amministrazione e come può aiutarti nella tua esperienza universitaria
             </p>
           </div>
 
@@ -206,6 +189,20 @@ export default function Home() {
             >
               Visita il vecchio sito
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Contacts Section */}
+      <section className="py-6 sm:py-8 md:py-16 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Contatti</h2>
+            <div className="flex flex-col items-center gap-4">
+              <p className="text-lg">Mail: pietrogentili2004@gmail.com</p>
+              <p className="text-lg">Instagram: pietro_gentili_</p>
+              <p className="text-lg">Tik Tok: pietro_gentili</p>
+            </div>
           </div>
         </div>
       </section>

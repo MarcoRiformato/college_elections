@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react"
 
-// Election date: May 7-8, 2025
-const ELECTION_DATE = new Date("2025-05-07T08:00:00")
+// Election date: May 14-15, 2025
+const ELECTION_DATE = new Date("2025-05-14T08:00:00")
 
 type TimeLeft = {
   days: number
@@ -72,7 +72,7 @@ export default function CountdownTimer() {
       </div>
 
       <div className="mt-2 sm:mt-4 text-center text-xs sm:text-sm">
-        <p>Le elezioni si terranno il 7-8 Maggio 2025</p>
+        <p>Le elezioni si terranno il 14-15 Maggio 2025</p>
       </div>
     </div>
   )

@@ -9,6 +9,7 @@ import SupportReels from "@/components/support-reels"
 import CountdownTimer from "@/components/countdown-timer"
 import { WhatsappCTA } from "@/components/whatsapp-cta"
 import { EmailCopyButton } from "@/components/email-copy-button"
+import CandidateVideo from "@/components/candidate-video"
 
 export default function Home() {
   return (
@@ -26,8 +27,9 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 -z-10 w-64 h-64 bg-blue-200 rounded-full blur-2xl opacity-30 transform -translate-x-1/2 translate-y-1/2"></div>
 
         <div className="container mx-auto max-w-6xl">
-          <div className="flex flex-col md:flex-row items-center gap-6 sm:gap-8 md:gap-12">
-            <div className="flex-1 space-y-4 sm:space-y-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+            {/* Text Content */}
+            <div className="w-full md:w-1/2 space-y-4 sm:space-y-6 text-center md:text-left">
               <div className="inline-block px-3 py-1 sm:px-4 sm:py-1 bg-blue-100 text-blue-800 rounded-full text-xs sm:text-sm font-medium animate-pulse">
                 Elezioni Università di Firenze 2025 🗳️
               </div>
@@ -42,7 +44,7 @@ export default function Home() {
                 Per un'università a misura di studente. Dove studiare, vivere e crescere insieme come comunità.
               </p>
 
-              <div className="flex flex-wrap gap-3 sm:gap-4">
+              <div className="flex flex-wrap gap-3 sm:gap-4 justify-center md:justify-start">
                 <Button
                   size="sm"
                   className="rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 sm:size-lg w-full sm:w-auto"
@@ -57,7 +59,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 sm:gap-4 pt-2 sm:pt-4">
+              <div className="flex items-center gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center md:justify-start">
                 <span className="text-xs sm:text-sm font-medium text-muted-foreground">Seguimi:</span>
                 <Link
                   href="#"
@@ -83,19 +85,17 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative flex-1 max-w-xs sm:max-w-sm md:max-w-md mt-6 md:mt-0 mb-4 sm:mb-0">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl blur-xl opacity-30 -z-10 transform rotate-3"></div>
-              <div className="relative bg-white rounded-3xl p-2 shadow-xl">
-                <Image
-                  src="/placeholder.svg?height=600&width=600"
-                  alt="Pietro Gentili"
-                  width={600}
-                  height={600}
-                  className="rounded-2xl"
+            {/* Video Component */}
+            <div className="w-full md:w-1/2 flex justify-center items-center mt-8 md:mt-0">
+              <div className="relative w-full max-w-[280px]">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl blur-xl opacity-30 -z-10 transform rotate-3"></div>
+                <CandidateVideo
+                  videoSrc="/video_presentazione_compressed.mp4"
+                  className="w-full"
                 />
-              </div>
-              <div className="absolute -bottom-4 -right-4 bg-yellow-400 text-yellow-900 rounded-full px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-bold shadow-lg transform rotate-6">
-                Il tuo voto conta! 🗳️
+                <div className="absolute -bottom-4 -right-4 bg-yellow-400 text-yellow-900 rounded-full px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-bold shadow-lg transform rotate-6">
+                  Il tuo voto conta! 🗳️
+                </div>
               </div>
             </div>
           </div>

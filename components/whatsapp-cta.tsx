@@ -8,7 +8,7 @@ export function WhatsappCTA({ variant = "default" }: { variant?: "default" | "fl
   const handleWhatsAppSignup = () => {
     // In a real implementation, this would open a WhatsApp chat or a form
     window.open(
-      "https://wa.me/391234567890?text=Voglio%20ricevere%20aggiornamenti%20sulla%20campagna%20di%20Pietro%20Gentili",
+      "https://wa.me/393773024349?text=Ciao!%20Voglio%20ricevere%20aggiornamenti%20sulla%20tua%20campagna",
       "_blank",
     )
   }

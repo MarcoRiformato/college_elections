@@ -45,15 +45,19 @@ export default function Home() {
               </p>
 
               <div className="flex flex-wrap gap-3 sm:gap-4 justify-center md:justify-start">
-                <Button
-                  size="sm"
-                  className="rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 sm:size-lg w-full sm:w-auto"
-                >
-                  Scopri il programma di CSX
-                </Button>
-                <Button size="sm" variant="outline" className="rounded-full border-2 sm:size-lg w-full sm:w-auto">
-                  Chi sono
-                </Button>
+                <Link href="/programma">
+                  <Button
+                    size="sm"
+                    className="rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 sm:size-lg w-full sm:w-auto"
+                  >
+                    Scopri il programma di CSX
+                  </Button>
+                </Link>
+                <Link href="/chi-sono">
+                  <Button size="sm" variant="outline" className="rounded-full border-2 sm:size-lg w-full sm:w-auto">
+                    Chi sono
+                  </Button>
+                </Link>
                 <div className="hidden sm:block">
                   <WhatsappCTA />
                 </div>
@@ -62,25 +66,22 @@ export default function Home() {
               <div className="flex items-center gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center md:justify-start">
                 <span className="text-xs sm:text-sm font-medium text-muted-foreground">Seguimi:</span>
                 <Link
-                  href="#"
+                  href="https://www.facebook.com/pietro.gentili.35"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-blue-100 p-1.5 sm:p-2 rounded-full text-blue-600 hover:bg-blue-200 transition-colors"
                 >
                   <Facebook size={16} className="sm:w-5 sm:h-5" />
                   <span className="sr-only">Facebook</span>
                 </Link>
                 <Link
-                  href="#"
+                  href="https://www.instagram.com/pietro_gentili_/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-pink-100 p-1.5 sm:p-2 rounded-full text-pink-600 hover:bg-pink-200 transition-colors"
                 >
                   <Instagram size={16} className="sm:w-5 sm:h-5" />
                   <span className="sr-only">Instagram</span>
-                </Link>
-                <Link
-                  href="#"
-                  className="bg-sky-100 p-1.5 sm:p-2 rounded-full text-sky-600 hover:bg-sky-200 transition-colors"
-                >
-                  <Twitter size={16} className="sm:w-5 sm:h-5" />
-                  <span className="sr-only">Twitter</span>
                 </Link>
               </div>
             </div>
@@ -177,15 +178,15 @@ export default function Home() {
       {/* Old Website Link */}
       <section className="py-3 px-4 border-t">
         <div className="container mx-auto max-w-6xl">
-          <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-            <span>Visita il sito della precedente campagna elettorale:</span>
+          <div className="flex items-center justify-center">
             <Link 
               href="https://old.pietrogentili.it" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-blue-600 hover:text-blue-800 hover:underline"
+              className="text-sm text-muted-foreground hover:text-primary inline-flex items-center gap-2"
             >
-              old.pietrogentili.it
+              Visita il sito della campagna elettorale amministratativa del comune di Portoferraio 2024
+              <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>

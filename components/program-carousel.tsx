@@ -9,34 +9,58 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const programItems = [
   {
-    emoji: "🏠",
-    title: "Diritto allo studio",
+    emoji: "🎓",
+    title: "La Visione di università",
     description:
-      "Garantire il diritto all'abitare, aumentando i posti nelle residenze universitarie e lavorare per potenziare i fondi del DSU",
+      "Credo in un'Universita' che non sia fatta solo di esami e lezioni ma che sia piuttosto un luogo da vivere a 360°, che sappia essere una comunità inclusiva e accogliente dove tutti possono formarsi e crescere in un clima pacifico ma al tempo stesso dinamico e sempre stimolante.",
   },
   {
     emoji: "⏰",
-    title: "Orari",
+    title: "Minimo 7 appelli",
     description:
-      "Dare linee guida omogenee per avere orari razionali e comodi, senza vuoti non indispensabili e coerenti con le esigenze di pendolari, lavoratori e fuorisede",
+      "Più appelli significa più possibilità di organizzarsi, maggiore tranquillità e una distribuzione intelligente del carico di studio. Per questo chiediamo un MINIMO DI 7 APPELLI per ogni anno accademico.",
   },
   {
     emoji: "👥",
-    title: "Socialità",
+    title: "Comunità e aggregazione",
     description:
-      "L'università va vissuta. Ci impegneremo per costruire nuove occasioni di socialità come progetti, competizioni di dibattito, laboratori ed iniziative volontarie sul territorio",
+      "Siano 3, 5 o 7 quelli dell'università dovrebbero essere alcuni tra i 'migliori anni della nostra vita'. Vogliamo creare iniziative, competizioni, progetti e uscite presso luoghi di interesse accademico per far crescere insieme conoscenze, amicizie e relazioni umane.",
+  },
+  {
+    emoji: "📚",
+    title: "Didattica innovativa",
+    description:
+      "Laboratori, seminari e attività pratiche devono affiancare la didattica frontale. Solo così possiamo capire a pieno ciò che studiamo e approfondirlo secondo i nostri interessi.",
   },
   {
     emoji: "🏢",
-    title: "Spazi studenteschi",
+    title: "Corsi, Spazi e docenti",
     description:
-      "Vogliamo spazi adeguati alle nostre esigenze anche dopo l'orario delle lezioni. Aule studio, tavoli all'aperto, aree verdi e punti di aggregazione devono essere presenti in ogni polo",
+      "Vogliamo aumentare il numero di professori e con essi le partizioni di tutti i corsi più affollati, ottenendo classi meno numerose, e lavorare per recuperare gli spazi inagibili o inutilizzati.",
   },
   {
-    emoji: "👂",
-    title: "Ascolto",
+    emoji: "♿",
+    title: "Didattica inclusiva",
     description:
-      "La rappresentanza si basa sull'ascolto. L'unica promessa che so per certo di riuscire a realizzare è quella di ascoltare sempre tutti e costruire ogni scelta a partire dagli studenti che ne sono toccati direttamente",
+      "L'Universita è casa di tutti. Vogliamo che UNIFI si impegni per rendere ogni spazio e attività accessibile per chi ha disabilità motorie, sensoriali o altri tipi di fragilità.",
+  },
+  {
+    emoji: "🏠",
+    title: "Diritto all'abitare",
+    description:
+      "Per studiare serve una casa. Vogliamo lavorare in tutte le sedi per ottenere più alloggi, finanziare nuove residenze studentesche e ottenere misure a tutela dei prezzi degli affitti per gli universitari.",
+  },
+  {
+    emoji: "🚌",
+    title: "Trasporti",
+    description:
+      "Vogliamo rendere permanente la convenzione per la scontistica sul trasporto urbano e lavorare con le istituzioni e Trenitalia per avere agevolazioni sui treni per pendolari e studenti.",
+  },
+  {
+    emoji: "🏢",
+    title: "Sportelli",
+    description:
+      "Antiviolenza, psicologico e legale sono gli sportelli essenziali che chiediamo all'Ateneo di istituire o potenziare, affinché nessuno venga lasciato indietro.",
   },
 ]
 

@@ -130,7 +130,7 @@ export default function Home() {
         <div className="absolute top-1/2 left-0 w-full h-72 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 -z-10 transform -translate-y-1/2"></div>
 
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-6 sm:mb-8 md:mb-12">
+          <div className="text-center mb-6 sm:mb-8 md:mb-12 hidden sm:block">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4">Il nostro programma 📝</h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
               Ecco i punti principali che mi impegno a portare avanti per migliorare la nostra università
@@ -170,43 +170,6 @@ export default function Home() {
             >
               Scopri come si vota
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Contacts Section */}
-      <section className="py-6 sm:py-8 md:py-16 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Contatti</h2>
-            <p className="text-lg mb-6">Se vuoi parlare meglio delle nostre proposte, farmi domande o avere informazioni, ti lascio tutti i miei contatti:</p>
-            <div className="flex flex-col items-center gap-4">
-              <div className="flex items-center gap-2">
-                <Mail className="h-5 w-5" />
-                <span className="text-lg">pietrogentili2004@gmail.com</span>
-                <EmailCopyButton />
-              </div>
-              <Link 
-                href="https://instagram.com/pietro_gentili_" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-lg hover:text-blue-600 transition-colors"
-              >
-                <Instagram className="h-5 w-5" />
-                <span>pietro_gentili_</span>
-              </Link>
-              <Link 
-                href="https://tiktok.com/@pietro_gentili" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-lg hover:text-blue-600 transition-colors"
-              >
-                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
-                </svg>
-                <span>pietro_gentili</span>
-              </Link>
-            </div>
           </div>
         </div>
       </section>

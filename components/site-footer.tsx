@@ -33,11 +33,6 @@ export default function SiteFooter() {
                   Come Si Vota
                 </Link>
               </li>
-              <li>
-                <Link href="/contatti" className="text-muted-foreground hover:text-primary">
-                  Contatti
-                </Link>
-              </li>
             </ul>
           </div>
         </div>

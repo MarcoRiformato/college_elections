@@ -28,11 +28,6 @@ export default function SiteFooter() {
                   Programma
                 </Link>
               </li>
-              <li>
-                <Link href="/come-si-vota" className="text-muted-foreground hover:text-primary">
-                  Come Si Vota
-                </Link>
-              </li>
             </ul>
           </div>
         </div>

@@ -163,15 +163,6 @@ export default function Home() {
           </div>
 
           <WhatIsCda />
-
-          <div className="mt-6 sm:mt-8 text-center">
-            <Link
-              href="/come-si-vota"
-              className="inline-flex items-center justify-center rounded-md bg-white px-4 py-2 sm:px-8 sm:py-3 text-xs sm:text-sm font-medium text-blue-900 shadow transition-colors hover:bg-blue-50"
-            >
-              Scopri come si vota
-            </Link>
-          </div>
         </div>
       </section>
 

@@ -26,7 +26,7 @@ export default function ChiSono() {
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl blur-xl opacity-30 -z-10 transform rotate-3"></div>
             <div className="relative bg-white rounded-3xl p-2 shadow-xl">
               <Image
-                src="/placeholder.svg?height=600&width=600"
+                src="/pietro.webp"
                 alt="Pietro Gentili"
                 width={600}
                 height={600}

@@ -1,96 +1,76 @@
 "use client"
 
 import type React from "react"
-
 import { useState, useEffect } from "react"
-import Image from "next/image"
 import { ChevronUp, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-const supportReels = [
+const initialVideos = [
   {
     id: 1,
-    name: "Marco Bianchi",
-    role: "Studente di Economia",
-    quote:
-      "Pietro ha sempre ascoltato le esigenze degli studenti. Il suo impegno per migliorare gli spazi di studio è esattamente ciò di cui abbiamo bisogno!",
-    image: "https://picsum.photos/id/1012/600/800",
+    type: "video",
+    url: "https://www.instagram.com/p/DIL-KR4v5_U/",
+    embedUrl: "https://www.instagram.com/p/DIL-KR4v5_U/embed/captioned/",
   },
   {
     id: 2,
-    name: "Giulia Rossi",
-    role: "Rappresentante Scienze Politiche",
-    quote:
-      "Ho lavorato con Pietro nel Consiglio di Dipartimento e posso garantire che è la persona giusta per rappresentarci nel CdA. Competente e determinato!",
-    image: "https://picsum.photos/id/1027/600/800",
+    type: "video",
+    url: "https://www.instagram.com/p/DIRBvDhP3uV/",
+    embedUrl: "https://www.instagram.com/p/DIRBvDhP3uV/embed/captioned/",
   },
   {
     id: 3,
-    name: "Alessandro Verdi",
-    role: "Associazione Studenti Sostenibili",
-    quote:
-      "Le proposte di Pietro sulla sostenibilità ambientale sono concrete e realizzabili. Finalmente qualcuno che pensa al futuro dell'università!",
-    image: "https://picsum.photos/id/1025/600/800",
+    type: "video",
+    url: "https://www.instagram.com/p/DIgqKdIP2Nk/",
+    embedUrl: "https://www.instagram.com/p/DIgqKdIP2Nk/embed/captioned/",
   },
   {
     id: 4,
-    name: "Francesca Neri",
-    role: "Studentessa di Medicina",
-    quote:
-      "Come studentessa con DSA, apprezzo molto l'attenzione di Pietro verso l'inclusività. Le sue proposte mi fanno sentire finalmente rappresentata.",
-    image: "https://picsum.photos/id/1062/600/800",
+    type: "video",
+    url: "https://www.instagram.com/p/DImFtmtsPRp/",
+    embedUrl: "https://www.instagram.com/p/DImFtmtsPRp/embed/captioned/",
   },
   {
     id: 5,
-    name: "Luca Marino",
-    role: "Studente Erasmus",
-    quote:
-      "L'impegno di Pietro per l'internazionalizzazione è fondamentale. Più opportunità di scambio significano un'università più aperta al mondo!",
-    image: "https://picsum.photos/id/1074/600/800",
-  },
+    type: "video",
+    url: "https://www.instagram.com/p/DIoL8UqsGR0/",
+    embedUrl: "https://www.instagram.com/p/DIoL8UqsGR0/embed/captioned/",
+  }
 ]
 
 export default function SupportReels() {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [touchStart, setTouchStart] = useState(0)
-  const [touchEnd, setTouchEnd] = useState(0)
+  const [shuffledVideos, setShuffledVideos] = useState(initialVideos)
 
-  // Auto-scroll every 3 seconds
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % supportReels.length)
-    }, 3000)
+    // Fisher-Yates shuffle algorithm
+    const shuffleArray = (array: typeof initialVideos) => {
+      const newArray = [...array]
+      for (let i = newArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1))
+        ;[newArray[i], newArray[j]] = [newArray[j], newArray[i]]
+      }
+      return newArray
+    }
 
-    return () => clearInterval(interval)
+    setShuffledVideos(shuffleArray(initialVideos))
   }, [])
 
+  // Auto-scroll every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % shuffledVideos.length)
+    }, 5000)
+
+    return () => clearInterval(interval)
+  }, [shuffledVideos.length])
+
   const nextReel = () => {
-    setCurrentIndex((prev) => (prev + 1) % supportReels.length)
+    setCurrentIndex((prev) => (prev + 1) % shuffledVideos.length)
   }
 
   const prevReel = () => {
-    setCurrentIndex((prev) => (prev - 1 + supportReels.length) % supportReels.length)
-  }
-
-  // Handle touch events for swipe
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setTouchStart(e.targetTouches[0].clientY)
-  }
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    setTouchEnd(e.targetTouches[0].clientY)
-  }
-
-  const handleTouchEnd = () => {
-    if (touchStart - touchEnd > 50) {
-      // Swipe up
-      nextReel()
-    }
-
-    if (touchStart - touchEnd < -50) {
-      // Swipe down
-      prevReel()
-    }
+    setCurrentIndex((prev) => (prev - 1 + shuffledVideos.length) % shuffledVideos.length)
   }
 
   return (
@@ -107,26 +87,26 @@ export default function SupportReels() {
         </Button>
       </div>
 
-      <div
-        className="overflow-hidden rounded-xl h-[300px] sm:h-[400px] md:h-[500px] border-2 border-purple-200 shadow-xl"
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
-      >
+      <div className="overflow-hidden rounded-xl h-[400px] sm:h-[500px] md:h-[600px] border-2 border-purple-200 shadow-xl">
         <div
           className="transition-transform duration-500 ease-in-out h-full"
           style={{ transform: `translateY(-${currentIndex * 100}%)` }}
         >
-          {supportReels.map((reel) => (
+          {shuffledVideos.map((reel) => (
             <div key={reel.id} className="relative h-full w-full flex-shrink-0">
-              <Image src={reel.image || "/placeholder.svg"} alt={reel.name} fill className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-4 sm:p-6 text-white">
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-3 md:p-4">
-                  <h3 className="font-bold text-base sm:text-lg md:text-xl">{reel.name}</h3>
-                  <p className="text-xs sm:text-sm text-blue-200">{reel.role}</p>
-                  <p className="mt-1 md:mt-2 text-xs sm:text-sm line-clamp-4 sm:line-clamp-none">"{reel.quote}"</p>
+              {reel.type === "video" && (
+                <div className="relative w-full h-full">
+                  <iframe
+                    src={reel.embedUrl}
+                    className="absolute top-0 left-0 w-full h-full"
+                    frameBorder="0"
+                    allowFullScreen
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  />
+                  <div className="absolute inset-0 pointer-events-none" />
                 </div>
-              </div>
+              )}
             </div>
           ))}
         </div>
@@ -145,7 +125,7 @@ export default function SupportReels() {
       </div>
 
       <div className="flex justify-center mt-3 sm:mt-4 gap-1.5 sm:gap-2">
-        {supportReels.map((_, index) => (
+        {shuffledVideos.map((_, index) => (
           <button
             key={index}
             className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full ${index === currentIndex ? "bg-blue-600" : "bg-gray-300"}`}
@@ -153,7 +133,6 @@ export default function SupportReels() {
           />
         ))}
       </div>
-      <div className="text-xs text-center mt-1 text-muted-foreground sm:hidden">Scorri verso l'alto o il basso</div>
     </div>
   )
 }

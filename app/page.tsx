@@ -116,10 +116,7 @@ export default function Home() {
 
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-6 sm:mb-8 md:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4">Chi Mi Sostiene 👥</h2>
-            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-              Scopri perché tanti studenti hanno deciso di sostenere la mia candidatura
-            </p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4">Gli altri candidati della lista CSX Firenze</h2>
           </div>
 
           <SupportReels />

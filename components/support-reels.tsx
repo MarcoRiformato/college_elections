@@ -56,15 +56,6 @@ export default function SupportReels() {
     setShuffledVideos(shuffleArray(initialVideos))
   }, [])
 
-  // Auto-scroll every 5 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % shuffledVideos.length)
-    }, 5000)
-
-    return () => clearInterval(interval)
-  }, [shuffledVideos.length])
-
   const nextReel = () => {
     setCurrentIndex((prev) => (prev + 1) % shuffledVideos.length)
   }
@@ -74,7 +65,7 @@ export default function SupportReels() {
   }
 
   return (
-    <div className="relative max-w-xs sm:max-w-sm md:max-w-md mx-auto">
+    <div className="relative w-full max-w-[95vw] sm:max-w-3xl md:max-w-4xl mx-auto">
       <div className="absolute -left-2 sm:-left-4 top-1/2 z-10 transform -translate-y-1/2">
         <Button
           variant="outline"

@@ -111,11 +111,11 @@ export default function Home() {
       </section>
 
       {/* Support Reels Section */}
-      <section className="py-6 sm:py-8 md:py-16 px-4 relative overflow-hidden">
+      <section className="py-4 sm:py-6 md:py-8 px-2 sm:px-3 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-white to-purple-50 -z-10"></div>
 
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-6 sm:mb-8 md:mb-12">
+          <div className="text-center mb-4 sm:mb-6 md:mb-8">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4">Gli altri candidati della lista CSX Firenze</h2>
           </div>
 

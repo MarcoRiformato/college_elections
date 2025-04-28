@@ -173,7 +173,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="text-sm text-muted-foreground hover:text-primary inline-flex items-center gap-2"
             >
-              Visita il sito della campagna elettorale amministratativa del comune di Portoferraio 2024
+              Visita il sito per la mia campagna elettorale al comune di Portoferraio per le elezioni amministrative del 2024
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>

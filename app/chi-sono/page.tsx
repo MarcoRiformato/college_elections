@@ -41,19 +41,15 @@ export default function ChiSono() {
           <div className="space-y-6">
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-muted-foreground">
-                Ciao! Sono Pietro, ho 23 anni e sono uno studente di Giurisprudenza all'Università di Firenze. La mia
-              passione per la politica universitaria è nata durante il primo anno, quando ho iniziato a partecipare
-              attivamente alla vita del campus.
-            </p>
+                Ciao!
+                Mi chiamo Pietro Gentili, frequento il secondo anno di giurisprudenza e ho deciso di candidarmi al Consiglio di Amministrazione con CSX, perché credo che l'università meriti di essere vissuta da tutti come una casa ed una comunità: accogliente, formativa, felice e solidale.
+              </p>
               <p className="text-lg text-muted-foreground">
-              Negli ultimi due anni ho fatto parte della rappresentanza studentesca nel Consiglio di Dipartimento, dove
-              ho potuto toccare con mano le problematiche che affrontano quotidianamente gli studenti e lavorare per
-              trovare soluzioni concrete.
-            </p>
+                Dai primi anni del liceo mi sono impegnato per la mia comunità studentesca, come rappresentante e poi anche come coordinatore regionale prima e portavoce nazionale dopo delle Consulte Studentesche: lavorando per difendere i diritti di tutti gli studenti d'italia.
+              </p>
               <p className="text-lg text-muted-foreground">
-                Mi candido al Consiglio di Amministrazione con CSX perché credo che l'università debba essere un luogo inclusivo,
-              sostenibile e orientato al futuro, dove ogni studente possa esprimere al meglio il proprio potenziale.
-            </p>
+                Fare rappresentanza e lavorare per la comunità è da sempre la mia passione e farò di tutto -se ne avrò l'opportunità- per costruire un' Universita migliore per tutti, dove nessuno venga mai lasciato indietro.
+              </p>
             </div>
 
             <div className="flex flex-wrap gap-4">

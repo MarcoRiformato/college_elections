@@ -118,6 +118,7 @@ export default function ChiSono() {
           </Card>
         </div>
 
+        {/* Le mie esperienze section commented out
         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold mb-6 text-center">Le Mie Esperienze 📅</h2>
 
@@ -182,6 +183,7 @@ export default function ChiSono() {
             </div>
           </div>
         </div>
+        */}
       </div>
     </main>
   )
